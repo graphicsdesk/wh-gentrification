@@ -7,12 +7,42 @@
       "root": "./src/partials",
       "locals": {
         "top": [],
-        "body": [],
+        "body": [
+          {
+            "type": "text",
+            "value": "Leadin. Something to draw the reader in. Graphics is the only visuals and words desk at the Spectator."
+          },
+          {
+            "type": "text",
+            "value": "Nutgraf. What is the meat of the story? Why does this matter?"
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": ""
+            }
+          },
+          {
+            "type": "text",
+            "value": "<i>City News</i>"
+          },
+          {
+            "type": "text",
+            "value": "<i>Graphics reporter Mariam Mustafa can be contacted at </i><a href=\"mailto:mariam.mustafa@columbiaspectator.com\"><i>mariam.mustafa@columbiaspectator.com</i></a><i>.</i>"
+          },
+          {
+            "type": "text",
+            "value": "<i>Graphics reporter Adina Cazacu-De Luca can be contacted at </i><a href=\"mailto:adina.cazacu.de.luca@columbiaspectator.com\"><i>adina.cazacu.de.luca@columbiaspectator.com</i></a><i>.</i>"
+          }
+        ],
+        "headline": "The U.S. and Ivy League schools were late to respond to COVID-19.",
+        "date": "October 17, 2019",
+        "byline": "By Katherine Nessel and\nData reporting by Mariam Mustafa and Adina Cazacu-De Luca",
         "USE_NEWS_NAV": true,
         "USE_EYE_NAV": false,
         "USE_COVER_HED": false,
         "IS_EMBED": false,
-        "DOC_URL": null
+        "DOC_URL": "\u0016https://docs.google.com/document/d/14_o1JiWqrtMwQ9B4HPCb_IpsgegNEKfbzs2W15WGgmU/edit?usp=sharing"
       }
     }
   }

@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "wh-gentrification",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -12,8 +12,8 @@
     "eslint": "^7.0.0",
     "parcel-bundler": "^1.12.3",
     "patch-package": "^6.2.2",
-    "posthtml-expressions": "^1.4.0",
-    "posthtml-include": "^1.4.3",
+    "posthtml-expressions": "^1.9.0",
+    "posthtml-include": "^1.7.2",
     "sass": "^1.26.5"
   },
   "dependencies": {
@@ -33,6 +33,6 @@
     "USE_EYE_NAV": false,
     "USE_COVER_HED": false,
     "IS_EMBED": false,
-    "DOC_URL": null
+    "DOC_URL": "\u0016https://docs.google.com/document/d/14_o1JiWqrtMwQ9B4HPCb_IpsgegNEKfbzs2W15WGgmU/edit?usp=sharing"
   }
 }
