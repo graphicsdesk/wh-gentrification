@@ -19,7 +19,25 @@
           {
             "type": "graphic",
             "value": {
-              "asset": ""
+              "asset": "pov.html"
+            }
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "nrent.html"
+            }
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "rinc.html"
+            }
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "hsd1.html"
             }
           },
           {
@@ -37,7 +55,7 @@
         ],
         "headline": "The U.S. and Ivy League schools were late to respond to COVID-19.",
         "date": "October 17, 2019",
-        "byline": "By Katherine Nessel and\nData reporting by Mariam Mustafa and Adina Cazacu-De Luca",
+        "byline": "By Katherine Nessel and\nData reporting by Mariam Mustafa and <a href=\"https://www.columbiaspectator.com/search=adina&from=0/\">Adina Cazacu-De Luca</a>",
         "USE_NEWS_NAV": true,
         "USE_EYE_NAV": false,
         "USE_COVER_HED": false,

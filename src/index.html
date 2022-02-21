@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
@@ -36,6 +37,9 @@
       </each>
     </div>
 
+
+ 
+
     <if condition="USE_COVER_HED">
       <include src="partials/header-cover.html"></include>
     </if>
@@ -60,6 +64,18 @@
               <if condition="item.value.asset === 'graphic-name.html'">
                 <include src="graphic-name.html"></include>
               </if>
+              <if condition="item.value.asset === 'pov.html'">
+                <include src="pov.html"></include>
+              </if>
+              <if condition="item.value.asset === 'hsd1.html'">
+                <include src="hsd1.html"></include>
+              </if>
+              <if condition="item.value.asset === 'rinc.html'">
+                <include src="rinc.html"></include>
+              </if>
+              <if condition="item.value.asset === 'nrent.html'">
+                <include src="nrent.html"></include>
+              </if>
             </div>
           </case>
         </switch>
@@ -69,5 +85,10 @@
     <include src="partials/footer.html"></include>
 
     <script src="./script.js"></script>
+    <script src="./pov.js"></script>
+    <script src="./hsd1.js"></script>
+    <script src="./rinc.js"></script>
+    <script src="./nrent.js"></script>
+
   </body>
 </html>
