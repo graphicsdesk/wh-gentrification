@@ -110,57 +110,36 @@ maprinc.on('idle', () => {
         item.appendChild(value);
         legendrinc.appendChild(item);
     });
-    var x ='';
+    var xrinc ='';
     maprinc.on('load', function () {
-        maprinc.addSource('tracts', {
-            "type": "vector",
-            "url": "mapbox://apark2020.5t3c6xuy"
-        });
-        maprinc.addLayer({
-            "id": "numbers",
-            "type": "fill",
-            "source": "tracts",
-            "source-layer": "feb17_tracts_geojson-9hdes3",
-            'paint': {
-                'fill-color': 'transparent',
-                'fill-opacity': 1.0
-             }
-        })
-        maprinc.on('click', 'numbers', function (e) {
+        maprinc.on('mousemove', (e) => {
+            const tractrinc = maprinc.queryRenderedFeatures(e.point, {
+                layers: ['tracts']
+            });
             // Change the cursor style as a UI indicator.
             maprinc.getCanvas().style.cursor = 'pointer';
-    
+
             // Single out the first found feature.
-            var feature = e.features[0];
-    
             // Display a popup with the name of the county
-            if(clickedrinc === toggleableLayerIdsRINC[0]){
-                x=feature.properties.rinc_2010;
+            if (clickedrinc === toggleableLayerIdsRINC[0]) {
+                xrinc = tractrinc[0].properties.rinc_2010;
             }
-            else if(clickedrinc === toggleableLayerIdsRINC[1]){
-                x=feature.properties.rinc_2015;
+            else if (clickedrinc === toggleableLayerIdsRINC[1]) {
+                xrinc = tractrinc[0].properties.rinc_2015;
             }
-            else if(clickedrinc === toggleableLayerIdsRINC[2]){
-                x=feature.properties.rinc_2019;
+            else if (clickedrinc === toggleableLayerIdsRINC[2]) {
+                xrinc = tractrinc[0].properties.rinc_2019;
             }
-            if((clickedrinc != toggleableLayerIdsRINC[0])&&(clickedrinc != toggleableLayerIdsRINC[1])&&(clickedrinc != toggleableLayerIdsRINC[2])){
-                popup.remove();
-            }
-            else{
-                const popup = new mapboxgl.Popup();
-                popup.setLngLat(e.lngLat)
-                .setHTML(
-                    `
-                    <h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${feature.properties.NAMELSAD}</h3>
-                    <p style="font-size:18px;font-family:"Roboto";margin-top:2px">${x}%</p>
-                    </body>`
-                )
-                .addTo(maprinc);
-            }
+            //      if((clickedrinc != toggleableLayerIdsRINC[0])&&(clickedrinc != toggleableLayerIdsRINC[1])&&(clickedrinc != toggleableLayerIdsRINC[2])){
+            //        popup.remove();
+            //  }
+            document.getElementById('pdrinc').innerHTML = tractrinc.length
+            ? `<h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${tractrinc[0].properties.NAMELSAD}</h3>
+            <p style="font-size:18px;font-family:"Roboto";margin-top:2px">${xrinc}%</p>`
+            : `<p>Hover over a tract!</p>`;
         });
-    
-        maprinc.on('mouseleave', 'numbers', function () {
-            maprinc.getCanvas().style.cursor = '';
-            popup.remove();
-        });
+    maprinc.on('mouseleave','tracts' ,function () {
+        maprinc.getCanvas().style.cursor = '';
+        document.getElementById('pdrinc').innerHTML = `<p>Hover over a tract!</p>`;
+    });
 });

@@ -8,7 +8,7 @@ const mapnrent = new mapboxgl.Map({
     zoom: 13.4
 });
 var clickednrent = '2010rent';
-const toggleableLayerIdsNRENT = ['2010rent','2015rent','2019rent'];
+const toggleableLayerIdsNRENT = ['2010rent', '2015rent', '2019rent'];
 // After the last frame rendered before the map enters an "idle" state.
 mapnrent.on('idle', () => {
 
@@ -27,18 +27,18 @@ mapnrent.on('idle', () => {
         const link = document.createElement('a');
         link.id = id;
         link.href = '#';
-        if(id=='2010rent'){
+        if (id == '2010rent') {
             link.textContent = '2010';
         }
-        else if(id=='2015rent'){
+        else if (id == '2015rent') {
             link.textContent = '2015';
         }
-        else if(id=='2019rent'){
+        else if (id == '2019rent') {
             link.textContent = '2019';
         }
         link.className = '';
-        if(id==toggleableLayerIdsNRENT[0]){
-            link.className='active';
+        if (id == toggleableLayerIdsNRENT[0]) {
+            link.className = 'active';
         }
         // Show or hide layer when the toggle is clickednrent.
         link.onclick = function (e) {
@@ -57,7 +57,7 @@ mapnrent.on('idle', () => {
                 if (clickedLayer === toggleableLayerIdsNRENT[j]) {
                     if (mapnrent.getLayoutProperty(clickedLayer, 'visibility') === 'visible') {
                         layers.children[j].className = '';
-                        clickednrent='none';
+                        clickednrent = 'none';
                         mapnrent.setLayoutProperty(toggleableLayerIdsNRENT[j], 'visibility', 'none');
                     }
                     else {
@@ -76,58 +76,38 @@ mapnrent.on('idle', () => {
         layers.appendChild(link);
     }
 });
-var x ='';
+var xnrent = '';
 mapnrent.on('load', function () {
-    mapnrent.addSource('tracts', {
-        "type": "vector",
-        "url": "mapbox://apark2020.5t3c6xuy"
-    });
-    mapnrent.addLayer({
-        "id": "numbers",
-        "type": "fill",
-        "source": "tracts",
-        "source-layer": "feb17_tracts_geojson-9hdes3",
-        'paint': {
-            'fill-color': 'transparent',
-            'fill-opacity': 1.0
-         }
-    })
-    mapnrent.on('click', 'numbers', function (e) {
+
+    mapnrent.on('mousemove', (e) => {
+        const tractnrent = mapnrent.queryRenderedFeatures(e.point, {
+            layers: ['tracts']
+        });
         // Change the cursor style as a UI indicator.
         mapnrent.getCanvas().style.cursor = 'pointer';
 
         // Single out the first found feature.
-        var feature = e.features[0];
-
         // Display a popup with the name of the county
-        if(clickednrent === toggleableLayerIdsNRENT[0]){
-            x=feature.properties.rent_2010;
+        if (clickednrent === toggleableLayerIdsNRENT[0]) {
+            xnrent = tractnrent[0].properties.rent_2010;
         }
-        else if(clickednrent === toggleableLayerIdsNRENT[1]){
-            x=feature.properties.rent_2015;
+        else if (clickednrent === toggleableLayerIdsNRENT[1]) {
+            xnrent = tractnrent[0].properties.rent_2015;
         }
-        else if(clickednrent === toggleableLayerIdsNRENT[2]){
-            x=feature.properties.rent_2019;
+        else if (clickednrent === toggleableLayerIdsNRENT[2]) {
+            xnrent = tractnrent[0].properties.rent_2019;
         }
-        if((clickednrent != toggleableLayerIdsNRENT[0])&&(clickednrent != toggleableLayerIdsNRENT[1])&&(clickednrent != toggleableLayerIdsNRENT[2])){
-            popup.remove();
-        }
-        else{
-            const popup = new mapboxgl.Popup();
-            popup.setLngLat(e.lngLat)
-            .setHTML(
-                `
-                <h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${feature.properties.NAMELSAD}</h3>
-                <p style="font-size:18px;font-family:"Roboto";margin-top:2px">$${x}</p>
-                </body>`
-            )
-            .addTo(mapnrent);
-        }
+        //      if((clickedhsd != toggleableLayerIdsNRENT[0])&&(clickedhsd != toggleableLayerIdsNRENT[1])&&(clickedhsd != toggleableLayerIdsNRENT[2])){
+        //        popup.remove();
+        //  }
+        document.getElementById('pdnrent').innerHTML = tractnrent.length
+            ? `<h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${tractnrent[0].properties.NAMELSAD}</h3>
+        <p style="font-size:18px;font-family:"Roboto";margin-top:2px">$${xnrent}</p>`
+            : `<p>Hover over a tract!</p>`;
     });
-
-    mapnrent.on('mouseleave', 'numbers', function () {
+    mapnrent.on('mouseleave', 'tracts', function () {
         mapnrent.getCanvas().style.cursor = '';
-        popup.remove();
+        document.getElementById('pdnrent').innerHTML = `<p>Hover over a tract!</p>`;
     });
     const layers = [
         '<$500',
@@ -153,8 +133,8 @@ mapnrent.on('load', function () {
     layers.forEach((layer, i) => {
         const color = colors[i];
         const item = document.createElement('div');
-        if(i==0){
-            item.classList.add( "first" );
+        if (i == 0) {
+            item.classList.add("first");
         }
         const key = document.createElement('span');
         key.className = 'legendnrent-key';

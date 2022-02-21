@@ -52,6 +52,22 @@
             position: relative
         }
 
+        #featurespov {
+            top: 0;
+            left: 0;
+            margin-left:30px;
+            height: 90px;
+            margin-top: 20px;
+            width: 110px;
+            outline: 3px solid black;
+            font-family:"Roboto";
+        }
+
+        #pdpov{
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-bottom:0px;
+        }
         #menu a {
             font-size: 13px;
             font-family: "Roboto";
@@ -180,6 +196,7 @@
         <div class="wrapper">
             <div id='map'></div>
             <div id="menu"></div>
+            <div class='map-overlay' id='featurespov'><div id='pdpov' style="font-size:16px;"><p>Hover over a tract!</p></div></div>
             <div class='map-overlay' id='legend'>
             </div>
         </div>

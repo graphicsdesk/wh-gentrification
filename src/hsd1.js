@@ -12,6 +12,13 @@ const toggleableLayerIdsHSD = ['2010hsd','2015hsd','2019hsd'];
 // After the last frame rendered before the map enters an "idle" state.
 maphsd.on('idle', () => {
 
+    var layers = maphsd.getStyle().layers;
+
+    var layerIds = layers.map(function (layer) {
+        return layer.id;
+    });
+
+    console.log(layerIds);
 
     // Enumerate ids of the layers.
     //const toggleableLayerIdsRINC = ['2010', '2015', '2019'];
@@ -77,58 +84,57 @@ maphsd.on('idle', () => {
     }
 });
 
-var x ='';
+var xhsd ='';
 maphsd.on('load', function () {
    
-    maphsd.addSource('tracts', {
-        "type": "vector",
-        "url": "mapbox://apark2020.5t3c6xuy"
-    });
-    maphsd.addLayer({
-        "id": "numbers",
-        "type": "fill",
-        "source": "tracts",
-        "source-layer": "feb17_tracts_geojson-9hdes3",
-        'paint': {
-            'fill-color': 'transparent',
-            'fill-opacity': 1.0
-         }
-    })
+    //maphsd.addSource('tracts', {
+      //  "type": "vector",
+        //"url": "mapbox://apark2020.5t3c6xuy"
+    //});
+    //maphsd.addLayer({
+       //  "id": "numbers",
+       // "type": "fill",
+       // "source": "tracts",
+       // "source-layer": "feb17_tracts_geojson-9hdes3",
+       // 'paint': {
+       //     'fill-color': 'transparent',
+       //     'fill-opacity': 1.0
+       //  }
+    //})
     //const popup = new mapboxgl.Popup({
        // closeButton: false,
      //   closeOnClick: false
    // });
-    maphsd.on('mousemove', 'numbers',function(e) {
-        const tract = maphsd.queryRenderedFeatures(e.point, {
-            layers: ['numbers']
-          });
-        // Change the cursor style as a UI indicator.
-        maphsd.getCanvas().style.cursor = 'pointer';
-    
-        // Single out the first found feature.
-          
-        
-        // Display a popup with the name of the county
-        if(clickedhsd === toggleableLayerIdsHSD[0]){
-            x=tract.hsd_2010;
-        }
-        else if(clickedhsd === toggleableLayerIdsHSD[1]){
-            x=tract.hsd_2015;
-        }
-        else if(clickedhsd === toggleableLayerIdsHSD[2]){
-            x=tract.hsd_2019;
-        }
-  //      if((clickedhsd != toggleableLayerIdsHSD[0])&&(clickedhsd != toggleableLayerIdsHSD[1])&&(clickedhsd != toggleableLayerIdsHSD[2])){
-    //        popup.remove();
-      //  }
-        document.getElementById('pd').innerHTML = x
-        ? `<h3>${tract.NAMELSAD}</h3><p><strong><em>${x}</strong>%</em></p>`
-        : `<p>Hover over a state!</p>`;
+    maphsd.on('mousemove', (e) => {
+            const tracthsd = maphsd.queryRenderedFeatures(e.point, {
+                layers: ['tracts']
+            });
+            // Change the cursor style as a UI indicator.
+            maphsd.getCanvas().style.cursor = 'pointer';
+
+            // Single out the first found feature.
+            // Display a popup with the name of the county
+            if (clickedhsd === toggleableLayerIdsHSD[0]) {
+                xhsd = tracthsd[0].properties.hsd_2010;
+            }
+            else if (clickedhsd === toggleableLayerIdsHSD[1]) {
+                xhsd = tracthsd[0].properties.hsd_2015;
+            }
+            else if (clickedhsd === toggleableLayerIdsHSD[2]) {
+                xhsd = tracthsd[0].properties.hsd_2019;
+            }
+            //      if((clickedhsd != toggleableLayerIdsHSD[0])&&(clickedhsd != toggleableLayerIdsHSD[1])&&(clickedhsd != toggleableLayerIdsHSD[2])){
+            //        popup.remove();
+            //  }
+            document.getElementById('pdhsd').innerHTML = tracthsd.length
+            ? `<h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${tracthsd[0].properties.NAMELSAD}</h3>
+            <p style="font-size:18px;font-family:"Roboto";margin-top:2px">${xhsd}%</p>`
+            : `<p>Hover over a tract!</p>`;
+        });
+    maphsd.on('mouseleave','tracts' ,function () {
+        maphsd.getCanvas().style.cursor = '';
+        document.getElementById('pdhsd').innerHTML = `<p>Hover over a tract!</p>`;
     });
-   // maphsd.on('mouseleave', 'numbers', function () {
-     //   maphsd.getCanvas().style.cursor = '';
-       // popup.remove();
-    //});
 
     const layershsd = [
         '50%-60%',

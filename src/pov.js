@@ -111,58 +111,37 @@ map.on('idle', () => {
         legend.appendChild(item);
     });
     
-    var x ='';
+    var xpov ='';
     map.on('load', function () {
     
-        map.addSource('tracts', {
-            "type": "vector",
-            "url": "mapbox://apark2020.845x1exg"
-        });
-        map.addLayer({
-            "id": "numbers",
-            "type": "fill",
-            "source": "tracts",
-            "source-layer": "feb17_new_tracts_geojson-7h0u9p",
-            'paint': {
-                'fill-color': 'transparent',
-                'fill-opacity': 1.0
-            }
-        })
-        map.on('click', 'numbers', function (e) {
+        map.on('mousemove', (e) => {
+            const tractpov = map.queryRenderedFeatures(e.point, {
+                layers: ['tracts']
+            });
             // Change the cursor style as a UI indicator.
             map.getCanvas().style.cursor = 'pointer';
-    
+
             // Single out the first found feature.
-            var feature = e.features[0];
-    
             // Display a popup with the name of the county
             if (clickedpov === toggleableLayerIdsPOV[0]) {
-                x = feature.properties.pov_2010;
+                xpov = tractpov[0].properties.pov_2010;
             }
             else if (clickedpov === toggleableLayerIdsPOV[1]) {
-                x = feature.properties.pov_2015;
+                xpov = tractpov[0].properties.pov_2015;
             }
             else if (clickedpov === toggleableLayerIdsPOV[2]) {
-                x = feature.properties.pov_2019;
+                xpov = tractpov[0].properties.pov_2019;
             }
-            if((clickedpov != toggleableLayerIdsPOV[0])&&(clickedpov != toggleableLayerIdsPOV[1])&&(clickedpov != toggleableLayerIdsPOV[2])){
-                popup.remove();
-            }
-            else{
-                const popup = new mapboxgl.Popup();
-                popup.setLngLat(e.lngLat)
-                .setHTML(
-                    `
-                    <h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${feature.properties.NAMELSAD}</h3>
-                    <p style="font-size:18px;font-family:"Roboto";margin-top:2px">${x}%</p>
-                    </body>`
-                )
-                .addTo(map);
-            }
+            //      if((clickedpov != toggleableLayerIdsPOV[0])&&(clickedpov != toggleableLayerIdsPOV[1])&&(clickedpov != toggleableLayerIdsPOV[2])){
+            //        popup.remove();
+            //  }
+            document.getElementById('pdpov').innerHTML = tractpov.length
+            ? `<h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${tractpov[0].properties.NAMELSAD}</h3>
+            <p style="font-size:18px;font-family:"Roboto";margin-top:2px">${xpov}%</p>`
+            : `<p>Hover over a tract!</p>`;
         });
-    
-        map.on('mouseleave', 'numbers', function () {
-            map.getCanvas().style.cursor = '';
-            popup.remove();
-        });
+    map.on('mouseleave','tracts' ,function () {
+        map.getCanvas().style.cursor = '';
+        document.getElementById('pd').innerHTML = `<p>Hover over a tract!</p>`;
+    });
 });
