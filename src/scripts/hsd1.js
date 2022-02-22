@@ -127,13 +127,13 @@ maphsd.on('load', function () {
             //        popup.remove();
             //  }
             document.getElementById('pdhsd').innerHTML = tracthsd.length
-            ? `<h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${tracthsd[0].properties.NAMELSAD}</h3>
-            <p style="font-size:18px;font-family:"Roboto";margin-top:2px">${xhsd}%</p>`
-            : `<p>Hover over a tract!</p>`;
+            ? `<h3 style="font-size:14px;font-family:'Roboto';padding:0px; margin-bottom:0px;">${tracthsd[0].properties.NAMELSAD}</h3>
+            <p style="font-size:18px;font-family:'Roboto';margin-top:2px">${xhsd}%</p>`
+            : `<p id=hover>Hover over a tract!</p>`;
         });
     maphsd.on('mouseleave','tracts' ,function () {
         maphsd.getCanvas().style.cursor = '';
-        document.getElementById('pdhsd').innerHTML = `<p>Hover over a tract!</p>`;
+        document.getElementById('pdhsd').innerHTML = `<p id=hover>Hover over a tract!</p>`;
     });
 
     const layershsd = [

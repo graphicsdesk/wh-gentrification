@@ -136,10 +136,10 @@ maprinc.on('idle', () => {
             document.getElementById('pdrinc').innerHTML = tractrinc.length
             ? `<h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${tractrinc[0].properties.NAMELSAD}</h3>
             <p style="font-size:18px;font-family:"Roboto";margin-top:2px">${xrinc}%</p>`
-            : `<p>Hover over a tract!</p>`;
+            : `<p id =hover>Hover over a tract!</p>`;
         });
     maprinc.on('mouseleave','tracts' ,function () {
         maprinc.getCanvas().style.cursor = '';
-        document.getElementById('pdrinc').innerHTML = `<p>Hover over a tract!</p>`;
+        document.getElementById('pdrinc').innerHTML = `<p id = hover>Hover over a tract!</p>`;
     });
 });
