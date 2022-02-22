@@ -106,21 +106,6 @@
             font-family:"Roboto";
         }        
 
-        @media screen and (max-width: 600px) {
-            #bodyF{
-                width:300px;
-            }
-            #maphsd{
-                width:300px;
-            }
-            .legendhsd {
-                width: 80%;
-            }
-
-            .legendhsd div span {
-                width: 3%;
-            }
-        }
         .analysis p{
             font-family:"Roboto";
             font-size:14px;
@@ -130,6 +115,38 @@
         }
         #firstcap{
             margin-top:10px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #bodyF{
+                max-width:90%;
+            }
+            #title{
+                max-width:100%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .wrapper {
+                max-width:90%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .map-overlay{
+                max-width:80%;
+            }
+            #maphsd{
+                max-width:100%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .legendhsd {
+                max-width: 50%;
+            }
+            .analysis{
+                width:95%;
+                margin-right:5%;
+            }
+            
         }
     </style>
 </head>

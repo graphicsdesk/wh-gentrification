@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Page Title</title>
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
@@ -160,19 +161,36 @@
         }
 
         @media screen and (max-width: 600px) {
+            
             #bodyF{
-                width:300px;
+                max-width:90%;
+            }
+            #title{
+                max-width:100%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .wrapper {
+                max-width:90%;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            .map-overlay{
+                max-width:80%;
             }
             #maprinc{
-                width:300px;
+                max-width:100%;
+                margin-left:auto;
+                margin-right:auto;
             }
             .legendrinc {
-                width: 80%;
+                max-width: 50%;
             }
-
-            .legendrinc div span {
-                width: 3%;
+            .analysis{
+                width:95%;
+                margin-right:5%;
             }
+            
         }
 
     </style>
