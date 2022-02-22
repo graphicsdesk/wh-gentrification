@@ -14,7 +14,7 @@ map.on('idle', () => {
 
 
     // Enumerate ids of the layers.
-    //const toggleableLayerIdsRINC = ['2010', '2015', '2019'];
+    //const toggleableLayerIdsPOV = ['2010', '2015', '2019'];
 
     // Set up the corresponding toggle button for each layer.
     for (const id of toggleableLayerIdsPOV) {
@@ -138,10 +138,10 @@ map.on('idle', () => {
             document.getElementById('pdpov').innerHTML = tractpov.length
             ? `<h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${tractpov[0].properties.NAMELSAD}</h3>
             <p style="font-size:18px;font-family:"Roboto";margin-top:2px">${xpov}%</p>`
-            : `<p id=hover>Hover over a tract!</p>`;
+            : `<p id =hover>Hover over a tract!</p>`;
         });
     map.on('mouseleave','tracts' ,function () {
         map.getCanvas().style.cursor = '';
-        document.getElementById('pd').innerHTML = `<p id=hover>Hover over a tract!</p>`;
+        document.getElementById('pdpov').innerHTML = `<p id = hover>Hover over a tract!</p>`;
     });
 });
