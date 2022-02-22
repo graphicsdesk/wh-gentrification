@@ -7,10 +7,13 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
     <style>
         #bodyF{
-            width:540px;
+            width:650px;
             margin-left:auto;
             margin-right:auto;
             padding:0;
+        }
+        .analysis{
+            width:680px;
         }
         h2,
         h3 {
@@ -30,14 +33,14 @@
         }
 
         #caption{
-            font-size:13px;
+            font-size:16px;
         }
         #mapnrent {
             position: relative;
             height: 720px;
             margin-left: auto;
             margin-right: auto;
-            width: 540px;
+            width: 650px;
         }
 
         #menunrent {
@@ -60,7 +63,9 @@
             outline: 3px solid black;
             font-family:"Roboto";
         }
-
+        #firstcap{
+            margin-top:10px;
+        }
         #pdnrent{
             margin-right: 0px;
             margin-left: 0px;
@@ -83,7 +88,9 @@
             border-bottom: 1px solid rgba(0, 0, 0, 0.25);
             text-align: center;
         }
-
+        #title{
+            margin-bottom:10px;
+        }
         #menunrent a:last-child {
             border: none;
         }
@@ -142,7 +149,12 @@
             height: 10px;
             margin-right: 5px;
             margin-left: 8px;
-        }    
+        }   
+        
+        .analysis p{
+            font-family:"Roboto";
+            font-size:14px;
+        }
 
         @media screen and (max-width: 600px) {
             #mapnrent{
@@ -176,7 +188,11 @@
             <div class='map-overlay' id='legendnrent'>
             </div>
         </div>
-
+        <div class ="analysis">
+                <p id ="firstcap">In 2010, Morningside Heights had an average gross median rent of $1,423, while Manhattanville’s average was $757 and South and Central Harlem’s average was $849.</p>
+                <p>In 2015, Morningside Heights had an average gross median rent of $1,825, while Manhattanville’s average was $957 and South and Central Harlem’s average was $1,069.</p>
+                <p>In 2019,  Morningside Heights had an average gross median rent of $2,030, while Manhattanville’s average was $1,136 and South and Central Harlem’s average was $1,394.</p>
+        </div>
     </div>
 
     <script>

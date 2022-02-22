@@ -8,12 +8,14 @@
     <style>
 
         #bodyF{
-            width:540px;
+            width:650px;
             margin-left:auto;
             margin-right:auto;
             padding:0;
         }        
-
+        .analysis{
+            width:680px;
+        }
         h2,
         h3 {
             margin: 10px;
@@ -34,7 +36,7 @@
             height: 720px;
             margin-left: auto;
             margin-right: auto;
-            width: 540px;
+            width: 650px;
         }
 
         #menu {
@@ -62,7 +64,9 @@
             outline: 3px solid black;
             font-family:"Roboto";
         }
-
+        #title{
+            margin-bottom:10px;
+        }
         #pdpov{
             margin-right: 0px;
             margin-left: 0px;
@@ -112,6 +116,9 @@
             overflow: auto;
             border-radius: 3px;
         }
+        #firstcap{
+            margin-top:10px;
+        }
         #legend {
             font: "Roboto";
             background-color:#f1f8ff; 
@@ -144,8 +151,12 @@
 
         #title{
             font-family:"Roboto";
-        }        
+        }    
 
+        .analysis p{
+            font-family:"Roboto";
+            font-size:14px;
+        }
  
         @media screen and (max-width: 600px) {
             #map{
@@ -173,6 +184,11 @@
             <div class='map-overlay' id='featurespov'><div id='pdpov' style="font-size:16px;"><p>Hover over a tract!</p></div></div>
             <div class='map-overlay' id='legend'>
             </div>
+        </div>
+        <div class ="analysis">
+                <p id ="firstcap">In 2010, Morningside Heights had an average poverty rate of 16 percent, while Manhattanville’s average was 33 percent and South and Central Harlem’s average was 22 percent.</p>
+                <p>In 2015, Morningside Heights had an average poverty rate of 14 percent , while Manhattanville’s average was 32 percent and South and Central Harlem’s average was 23 percent.</p>
+                <p>In 2019,  Morningside Heights had an average poverty rate of 12 percent, while Manhattanville’s average was 28 percent and South and Central Harlem’s average was 18 percent.</p>
         </div>
     </div>
     

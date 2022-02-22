@@ -10,11 +10,21 @@
         "body": [
           {
             "type": "text",
-            "value": "Leadin. Something to draw the reader in. Graphics is the only visuals and words desk at the Spectator."
+            "value": "Towering over Harlem from their vantage point in Morningside Park, luxury buildings shoot up like bamboo throughout Morningside Heights. While housing stock has increased with the new developments, median rents have also risen to new heights."
           },
           {
             "type": "text",
-            "value": "Nutgraf. What is the meat of the story? Why does this matter?"
+            "value": "Gentrification has become an increasingly pressing issue in New York City as new developments in historically affordable neighborhoods like West Harlem have pushed rents up significantly. West Harlem has seen median rents skyrocket from $1,650 in 2010 to $2,425 by the end of 2021, amid a surge in the construction of luxury apartment buildings. With Columbia’s Manhattanville expansion and increasing presence in West Harlem, the makeup of renters is also shifting towards short-term residents, like students, and away from long-term residents—a trend that alarms locals."
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "hsd1.html"
+            }
+          },
+          {
+            "type": "text",
+            "value": "Though educational attainment in South and Central Harlem has stayed the same, educational attainment in Morningside Heights and Manhattanville has increased since 2010. Manhattanville’s average high school degree attainment has increased by 10 percent in the past 10 years, growing twice as fast as Morningside Heights’, possibly reflecting an influx of educated residents."
           },
           {
             "type": "graphic",
@@ -23,22 +33,20 @@
             }
           },
           {
-            "type": "graphic",
-            "value": {
-              "asset": "nrent.html"
-            }
+            "type": "text",
+            "value": "While the neighborhood average poverty rate has fluctuated since 2010 in South and Central Harlem, the poverty rate has decreased consistently in Morningside Heights and Manhattanville by about five percent."
           },
           {
-            "type": "graphic",
-            "value": {
-              "asset": "rinc.html"
-            }
+            "type": "text",
+            "value": "<i>[Read more: </i><a href=\"https://www.columbiaspectator.com/news/2022/02/16/this-community-has-lost-a-piece-of-its-soul-community-members-weigh-the-impacts-of-columbias-expansion/\"><i>‘This community has lost a piece of its soul’: Community members weigh the impacts of Columbia’s expansion</i></a><i>]</i>"
           },
           {
-            "type": "graphic",
-            "value": {
-              "asset": "hsd1.html"
-            }
+            "type": "text",
+            "value": "The educational composition of the neighborhood has dramatically shifted over the past decade, with more residents with higher educational attainment now living in the neighborhood. The change has been most pronounced near the new Manhattanville campus, with surrounding census tracts experiencing an increasing proportion of high school-educated residents, in some cases growing by as much as 30 percent."
+          },
+          {
+            "type": "text",
+            "value": "The number of residents whose income falls below the poverty level has also decreased throughout West Harlem, suggesting that those with higher incomes are moving into the neighborhood or that those with lower incomes are being displaced."
           },
           {
             "type": "graphic",
@@ -49,18 +57,108 @@
           {
             "type": "graphic",
             "value": {
-              "asset": "mh_19_waffle.html"
-            }
-          },
-          {
-            "type": "graphic",
-            "value": {
               "asset": "rent_rooms_2019_data.html"
             }
           },
           {
             "type": "text",
-            "value": "<i>City News</i>"
+            "value": "In addition, affordability has decreased. Across almost all census tracts, rents have increased by around $500 for similar bedroom units from 2010 to 2019, putting a significant strain on West Harlem families."
+          },
+          {
+            "type": "text",
+            "value": "Between West 110th Street and West 114th Street, the vast majority of the housing stock consists of luxury developments and renovations. With the addition of these luxury buildings, the median rent has increased by $1,000 dollars since 2010. The lower average number of bedrooms per residence and this increase in rent together indicate a neighborhood geared increasingly towards luxury housing for individuals and couples."
+          },
+          {
+            "type": "text",
+            "value": "Avalon Morningside Park, located on West 110th Street and Morningside Drive, was completed in 2009 as one of the first new housing developments in the area. While some affordable units were initially offered, they are no longer on the market, and the average rental price in the building stands above $4,000 per month. It is accompanied by two other new luxury developments constructed or renovated into apartments in the past decade: 30 Morningside Drive and the Enclave at the Cathedral. 30 Morningside Drive, a renovated historic building from the former St. Luke’s hospital, received a historic tax credit for preserving its facade, but no affordable units were required under this credit nor included in the construction. Its cheapest studios rent for above $3,000 a month."
+          },
+          {
+            "type": "text",
+            "value": "“Rentals for as much as … $16,000 a month [in 30 Morningside Drive are] not serving the needs of the people in the community,” David Robinson, member of the executive committee of MHCC and retired tenant lawyer, said."
+          },
+          {
+            "type": "text",
+            "value": "In addition, some community members raise concerns that as Columbia expands its reach further into West Harlem, more new developments will veer away from affordable housing units in favor of accommodating students and others drawn into the area<a href=\"https://www.columbiaspectator.com/news/2021/11/05/facing-nychas-turn-to-privatization-manhattanville-residents-fear-how-developers-with-fiscal-motives-will-affect-their-housing/\"> by the University</a>."
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "rinc.html"
+            }
+          },
+          {
+            "type": "text",
+            "value": "The percentage of residents who spend more than 35 percent of their household income on rent has stayed relatively constant for each neighborhood, with the lowest percentage of residents spending more than 35 percent of their income on rent in South and Central Harlem, followed by Morningside Heights. Residents in Manhattanville have, on average, consistently spent more of their household income on rent than residents in other neighborhoods since 2010."
+          },
+          {
+            "type": "graphic",
+            "value": {
+              "asset": "nrent.html"
+            }
+          },
+          {
+            "type": "text",
+            "value": "Overall, rent has increased across all neighborhoods since 2010. Average neighborhood gross median rent has increased by an average of $607 in Morningside Heights, $379 in Manhattanville, and $545 in South and Central Harlem. Compared to the increase in gross rent in Manhattanville, rent has increased at a rate 1.6 times faster in Morningside Heights and 1.4 times faster in South and Central Harlem."
+          },
+          {
+            "type": "text",
+            "value": "While gross rent has dramatically risen in the past decade, the percentage of the population paying 35 percent or more of their income on rent—a subset of the “rent insecure” population, who spend 30 percent or more of their income on rent—has simultaneously decreased."
+          },
+          {
+            "type": "text",
+            "value": "As rising rents place pressure on existing residents, affordable housing efforts have floundered. The Enclave at the Cathedral, adjacent to the Cathedral of St. John the Divine, designated 87 of its 426 units as affordable housing, with rents for those two-bedroom units at around $1,200. However, applicants were required to have an income within a certain range of the Area Median Income, a number that doesn’t fully represent West Harlem residents."
+          },
+          {
+            "type": "text",
+            "value": "The key issue lies in the fact that this definition of affordable does not necessarily apply to the entire neighborhood."
+          },
+          {
+            "type": "text",
+            "value": "“What’s defined as affordable housing is based on an area median income that takes into account the entire metropolitan area,” Robinson said. “So-called affordable housing isn’t really contributing all that much to help maintain the economic and racial diversity of the neighborhood, which is our goal.”"
+          },
+          {
+            "type": "text",
+            "value": "The New York City area as defined by the AMI stretches almost 80 miles from Tottenville, Staten Island in the south to Patterson, Putnam County in the north. Within this region, the singular AMI is used to determine the prices of affordable housing for every development. The median household incomes of suburban Westchester, Rockland, and Putnam counties to the north—$97,000, $93,000, and $104,000, respectively—are far above New York City’s $64,000 median household income."
+          },
+          {
+            "type": "text",
+            "value": "The difference is even more pronounced within West Harlem. The neighborhood has a median household income of around $50,000, yet the rates for affordable housing are set for the 2020 New York City area AMI of $79,600 for just a one-person household. Therefore, for one person looking for a one-bedroom apartment to qualify for affordable housing at the Enclave at the Cathedral, residents had to have an income of between $30,446 and $47,760, or 38 percent to 60 percent New York City area AMI. Rather than remaining affordable to low-income West Harlem residents, only those residents around the neighborhood median income could qualify."
+          },
+          {
+            "type": "text",
+            "value": "New developments like the Vandewater, completed in 2021 on West 122nd Street between Broadway and Amsterdam Avenue, were built without affordable housing, making the least expensive market-rate unit for sale a $940,000 studio. Claremont Hall, a luxury building that just topped out above Union Theological Seminary’s campus, stands as the tallest building in Morningside Heights at 471 feet—and also does not include a single affordable unit."
+          },
+          {
+            "type": "text",
+            "value": "However, many residents believe that truly affordable housing should be required for new housing developments."
+          },
+          {
+            "type": "text",
+            "value": "“Every new building should have some affordable housing,” Tyrre Black, a former resident of Harlem who moved to Queens, said. “Back in the day you would get a two-bedroom for four or five hundred, [but] now that room is like $1500—it’s crazy. That’s why you see so many homeless people on the street.”"
+          },
+          {
+            "type": "text",
+            "value": "Homelessness has risen dramatically over the past decade as increasing rents have pushed people out of their homes. Across the city, shelter populations have increased by 16 percent over the last ten years and the number of single adults, who are most likely to bear the burden of rising studio rents, has skyrocketed by 91 percent."
+          },
+          {
+            "type": "text",
+            "value": "Under a 2016 city law, new developments in areas zoned to allow for more residential units are required to have at least 10 percent of their units designated as affordable. However, the rules do not apply to Morningside Heights and West Harlem, because their <a href=\"https://www.columbiaspectator.com/news/2019/09/24/outdated-zoning-city-planning-rejects-proposal-to-rezone-morningside-heights/\">zoning regulations have not been changed since 1961</a>."
+          },
+          {
+            "type": "text",
+            "value": "Even without a mandate, there are some new developments that dampen the effects of gentrification by allocating large swaths of housing to affordable units. The Frederick, a 75-unit building on 129th Street and Frederick Douglass Boulevard, was privately developed and rented out all of its units below the market rate in 2019. To compensate for the lower median household incomes of West Harlem families compared to the greater New York metro area, some units were rented with caps of 40 percent AMI, or around $32,640 for a one-person household. Built under the Food Retail Expansion to Support Health program, the building’s ground-floor supermarket meant that the developers were eligible for up to 25 years of tax breaks."
+          },
+          {
+            "type": "text",
+            "value": "Community pushback has led some <a href=\"https://www.columbiaspectator.com/news/2021/10/20/developer-withdraws-rezoning-proposal-for-high-rise-tower-in-hamilton-heights-following-community-pushback/\">luxury developments to be canceled further north in Hamilton Heights</a>. A 60-unit upscale building was shelved after CB9 was able to convince then-Councilmember Mark Levine to oppose the project for its relative lack of affordable units."
+          },
+          {
+            "type": "text",
+            "value": "Some believe that the <a href=\"https://www.columbiaspectator.com/news/2022/01/19/community-led-morningside-heights-planning-study-makes-progress-toward-rezoning-after-60-years/\">MHCC’s rezoning proposal</a> may be critical to halting such high-end development, which stalled under former Mayor de Blasio. However, with new leadership in the Department of City Planning, many advocates hope that rezoning can move forward and an affordable housing mandate can be instated."
+          },
+          {
+            "type": "text",
+            "value": "<i>Staff writer Katherine Nessel can be contacted at </i><a href=\"mailto:katherine.nessel@columbiaspectator.com\"><i>katherine.nessel@columbiaspectator.com</i></a><i>. </i><i>Follow her on Twitter </i><a href=\"https://twitter.com/KatherineNessel?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor\"><i>@KatherineNessel</i></a><i>.</i>"
           },
           {
             "type": "text",
@@ -69,14 +167,25 @@
           {
             "type": "text",
             "value": "<i>Graphics reporter Adina Cazacu-De Luca can be contacted at </i><a href=\"mailto:adina.cazacu.de.luca@columbiaspectator.com\"><i>adina.cazacu.de.luca@columbiaspectator.com</i></a><i>.</i>"
+          },
+          {
+            "type": "text",
+            "value": "<i>Graphics Editor Andrew Park can be contacted at </i><a href=\"mailto:andrew.park@columbiaspectator.com\"><i>andrew.park@columbiaspectator.com</i></a><i>. Follow him on Twitter </i><a href=\"https://twitter.com/androo_park\"><i>@androo_park</i></a>."
+          },
+          {
+            "type": "text",
+            "value": "<b><i>Want to keep up with breaking news? Subscribe to our </i></b><a href=\"https://columbiaspectator.us4.list-manage.com/subscribe?u=a3d2eeb1ae5560ca04f82f042&id=e51c51d62d\"><b><i>email newsletter </i></b></a><b><i>and like Spectator on </i></b><a href=\"https://www.facebook.com/columbiaspectator\"><b><i>Facebook</i></b></a><b><i>. </i></b>"
           }
         ],
-        "headline": "The U.S. and Ivy League schools were late to respond to COVID-19.",
-        "date": "October 17, 2019",
-        "byline": "By Katherine Nessel and\nData reporting by Mariam Mustafa, <a href=\"https://www.columbiaspectator.com/search=adina&from=0/\">Adina Cazacu-De Luca</a>, and Andrew Park",
+        "headline": "Demographic shift shakes West Harlem amid a surge of luxury developments",
+        "date": "February 21, 2022",
+        "byline": "By <a href=\"https://www.columbiaspectator.com/contributors/Katherine-Nessel/\">Katherine Nessel</a>",
+        "cover_asset": "https://cloudfront-us-east-1.images.arcpublishing.com/spectator/GZFSHEMKZZBL5IZE3FV27UNZBM.jpg",
+        "cover_caption": "Photo by Judy Goldstein",
+        "footer": "<b>Methodology</b>\nMorningside Heights, Manhattanville, and South and Central Harlem were investigated in this analysis. The following census tracts were included for each neighborhood. Morningside Heights: 197.01, 199, 201.01, 203, 205, 207.01, 209.01. Manhattanville: 219, 213.03, 223.01, 223.02. South and Central Harlem: 197.02, 201.02, 216, 218, 220, 222, 224, 257. These tracts were chosen for their proximity to Columbia’s campus and inclusion of properties owned by Columbia housing. \nCensus data from the American Community Survey was used. Five-year ACS estimates from 2010, 2015, and 2019, and the Demographic, Housing, and Economic Characteristics Data Profiles were used (see github for code). The 2019 estimate was used instead of the 2020 estimate because the Census Bureau deemed 2020’s data “experimental.” Analysis performed in R and Python. Maps made using MapBox.",
         "USE_NEWS_NAV": true,
         "USE_EYE_NAV": false,
-        "USE_COVER_HED": false,
+        "USE_COVER_HED": true,
         "IS_EMBED": false,
         "DOC_URL": "\u0016https://docs.google.com/document/d/14_o1JiWqrtMwQ9B4HPCb_IpsgegNEKfbzs2W15WGgmU/edit?usp=sharing"
       }

@@ -8,12 +8,14 @@
     <style>
         
         #bodyF{
-            width:540px;
+            width:650px;
             margin-left:auto;
             margin-right:auto;
             padding:0;
         }
-
+        .analysis{
+            width:680px;
+        }
         h2,
         h3 {
             margin: 10px;
@@ -30,10 +32,13 @@
 
         #maprinc {
             position: relative;
-            height: 720px;
+            height:720px;
             margin-left: auto;
             margin-right: auto;
-            width: 540px;
+            width: 650px;
+        }
+        #firstcap{
+            margin-top:10px;
         }
 
         #menurinc {
@@ -117,6 +122,9 @@
         #legendrinc .first{
             margin-top:10px;
         }
+        #title{
+            margin-bottom:10px;
+        }
         #legendrinc {
             font: "Roboto";
             background-color:#f1f8ff; 
@@ -146,7 +154,11 @@
             font-family:"Roboto";
         }        
 
-  
+        .analysis p{
+            font-family:"Roboto";
+            font-size:14px;
+        }
+
         @media screen and (max-width: 600px) {
             #maprinc{
                 width:300px;
@@ -159,6 +171,7 @@
                 width: 3%;
             }
         }
+
     </style>
 </head>
 
@@ -173,7 +186,13 @@
             <div class='map-overlay' id='featuresrinc'><div id='pdrinc' style="font-size:16px;"><p>Hover over a tract!</p></div></div>
             <div class='map-overlay' id='legendrinc'></div>
         </div>
+        <div class ="analysis">
+                <p id ="firstcap">In 2010, on average, 43 percent of Morningside Heights residents spent more than 35 percent of their household income on rent, while Manhattanville’s average was 50 percent and South and Central Harlem’s average was 38 percent.</p> 
+                <p>In 2015, on average, 41 percent of Morningside Heights residents spent more than 35 percent of their household income on rent, while Manhattanville’s average was 51 percent and South and Central Harlem’s average was 37 percent.</p> 
+                <p>In 2019, on average, 45 percent of Morningside Heights residents spent more than 35 percent of their household income on rent, while Manhattanville’s average was 48 percent and South and Central Harlem’s average was 35 percent.</p> 
+        </div>
     </div>
+        
     
 
     <script>
