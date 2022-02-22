@@ -65,6 +65,7 @@
             margin-right: 0px;
             margin-left: 0px;
             margin-bottom:0px;
+            text-align:center;
         }
         .wrapper {
             position: relative
@@ -99,6 +100,9 @@
 
         #menunrent a.active:hover {
             background: #3074a4;
+        }
+        #hover{
+            text-align:center;
         }
         .map-overlay {
             position: absolute;
@@ -140,42 +144,10 @@
             margin-left: 8px;
         }    
 
-        .mapboxgl-popup {
-            width:110px;
-            text-align:center;
-            margin-left:5px;
-            margin-right:5px;
-            max-height:100px;
-            overflow:clip;
-            opacity:90%;
-        }
-
-        
-        .mapboxgl-popup h3{
-            font-size:13px;
-            margin-top:15px;
-            font-family: "Roboto";
-            opacity:100%;
-            margin-bottom:5px;
-        }
-
-        .mapboxgl-popup p{
-            font-size:16px;
-            margin-top:4px;
-            margin-bottom:0px;
-            font-family: "Roboto";
-            opacity:100%;
-        }
-
-        .mapboxgl-popup-content{
-            padding-bottom:15px;
-            padding-top:15px;
-            padding-right:1px;
-            padding-left:1px;
-            font: 14px "Roboto";
-        }
-
         @media screen and (max-width: 600px) {
+            #mapnrent{
+                width:300px;
+            }
             .legendnrent {
                 width: 80%;
             }

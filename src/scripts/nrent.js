@@ -103,11 +103,11 @@ mapnrent.on('load', function () {
         document.getElementById('pdnrent').innerHTML = tractnrent.length
             ? `<h3 style="font-size:14px;font-family:"Roboto";padding:0px; margin-bottom:0px;">${tractnrent[0].properties.NAMELSAD}</h3>
         <p style="font-size:18px;font-family:"Roboto";margin-top:2px">$${xnrent}</p>`
-            : `<p>Hover over a tract!</p>`;
+            : `<p id=hover>Hover over a tract!</p>`;
     });
     mapnrent.on('mouseleave', 'tracts', function () {
         mapnrent.getCanvas().style.cursor = '';
-        document.getElementById('pdnrent').innerHTML = `<p>Hover over a tract!</p>`;
+        document.getElementById('pdnrent').innerHTML = `<p id=hover>Hover over a tract!</p>`;
     });
     const layers = [
         '<$500',
