@@ -89,13 +89,13 @@ mapnrent.on('load', function () {
         // Single out the first found feature.
         // Display a popup with the name of the county
         if (clickednrent === toggleableLayerIdsNRENT[0]) {
-            xnrent = tractnrent[0].properties.rent_2010;
+            xnrent = tractnrent[0].properties.nrent2010;
         }
         else if (clickednrent === toggleableLayerIdsNRENT[1]) {
-            xnrent = tractnrent[0].properties.rent_2015;
+            xnrent = tractnrent[0].properties.nrent2015;
         }
         else if (clickednrent === toggleableLayerIdsNRENT[2]) {
-            xnrent = tractnrent[0].properties.rent_2019;
+            xnrent = tractnrent[0].properties.nrent2019;
         }
         //      if((clickedhsd != toggleableLayerIdsNRENT[0])&&(clickedhsd != toggleableLayerIdsNRENT[1])&&(clickedhsd != toggleableLayerIdsNRENT[2])){
         //        popup.remove();
